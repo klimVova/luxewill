@@ -1,0 +1,285 @@
+@import "./grid";
+
+.main {
+  padding: 100px 0 0 0px;
+}
+@media (max-width: 767px) {
+  .main {
+    padding: 60px 0 0 0px;
+  }
+}
+.hero {
+  &__heading {
+    margin-bottom: 40px;
+  }
+
+  &__paragraph {
+    margin-bottom: 20px;
+  }
+
+  &__buttons {
+    display: flex;
+    justify-content: flex-start;
+    padding: 0 0 10px;
+  }
+
+  &__button {
+    &:first-of-type {
+      margin: 0 30px 0 0;
+      @media (max-width: 767px) {
+        margin: 0 10px 0 0;
+      }
+    }
+  }
+  &__image {
+    object-fit: cover;
+  }
+}
+.features {
+  margin: 135px 0 120px;
+}
+
+.feature {
+  &__heading {
+    max-width: 175px;
+  }
+  &__block {
+    margin-top: 40px;
+  }
+}
+
+.development {
+  padding: 70px 0 0;
+  &__description {
+    background-color: $luxewill-gray-second;
+  }
+  &__heading {
+    text-align: center;
+    max-width: 600px;
+    margin: 0 auto 65px;
+  }
+  &__description_item {
+    margin-left: 50px;
+  }
+  &__description_bottom {
+    display: flex;
+  }
+}
+
+.success-block {
+  background-color: $luxewill-black;
+  border-radius: 20px;
+  padding: 50px 160px;
+  @extend .container;
+  @extend .container--big;
+  transform: translateY(-50%);
+  @media (max-width: 767px) {
+    padding: 20px;
+  }
+}
+
+.development-block {
+  padding: 70px 0 0;
+  margin-bottom: 200px;
+
+  &__heading {
+    text-align: center;
+    max-width: 600px;
+    margin: 0 auto 65px;
+  }
+}
+
+.developments,
+.contacts {
+  &__heading {
+    margin-bottom: 20px;
+  }
+}
+
+.feature,
+.contact {
+  &__heading {
+    max-width: 175px;
+  }
+}
+
+.specialized {
+  padding: 70px 0 200px;
+
+  &__heading {
+    text-align: center;
+    max-width: 600px;
+    margin: 0 auto 65px;
+  }
+}
+.specialization {
+  max-width: 175px;
+  margin: 10px 0;
+}
+.contacts {
+  background-color: $luxewill-primary;
+  border-radius: 20px;
+  padding: 106px 160px;
+  @extend .container;
+  @extend .container--big;
+  &__heading {
+    text-align: start;
+  }
+}
+.contact {
+  &__input {
+    margin-left: 0px;
+  }
+}
+
+.about-us {
+  &__list {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+
+    @media screen and (min-width: 940px) {
+      flex-direction: row;
+    }
+  }
+
+  &__item {
+    width: 100%;
+    @media screen and (min-width: 940px) {
+      flex: 0 0 25%;
+      max-width: 25%;
+    }
+  }
+}
+
+.about-us-block {
+  position: relative;
+  text-align: center;
+
+  &__count {
+    font-family: "Montserrat Alternates";
+    font-weight: 600;
+    color: rgba($luxewill-gray-three, 0.2);
+    font-size: 30px;
+  }
+
+  &__circle-container {
+    margin: 10px 0;
+    overflow: hidden;
+    position: relative;
+
+    &::after,
+    &::before {
+      display: block;
+      content: "";
+      width: 100%;
+      height: 2px;
+      background-color: #686e7b;
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%, -50%);
+    }
+
+    &::after {
+      left: 50%;
+      right: 100%;
+    }
+
+    &::before {
+      right: 50%;
+      left: 0;
+    }
+  }
+
+  &__circle {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    margin: 0 auto 0 0;
+    background-color: $luxewill-primary;
+    position: relative;
+    z-index: 5;
+
+    @media screen and (min-width: 940px) {
+      margin: 0 auto;
+    }
+  }
+
+  &__heading {
+    font-family: "Oswald";
+    font-size: 18px;
+    color: $luxewill-gray-four;
+    max-height: 27px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+}
+@media (max-width: 767px) {
+  .about-us-block {
+    &__heading {
+      font-family: "Oswald";
+      font-size: 18px;
+      color: $luxewill-gray-four;
+      max-height: 27px;
+      overflow: initial;
+      text-overflow: ellipsis;
+      margin: 0 0 70px;
+    }
+  }
+}
+.input {
+  border-bottom: 1px solid black;
+  width: 100%;
+  min-width: 100px;
+  background-color: $luxewill-primary;
+  font-family: Open Sans;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 22px;
+  letter-spacing: 0.01em;
+  border: none;
+  border-bottom: 1px solid black;
+
+  &:focus {
+    outline: none;
+  }
+  &::placeholder {
+    font-family: Open Sans;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 22px;
+    color: ($luxewill-black, 0.6);
+  }
+}
+
+@media (max-width: 767px) {
+  .features {
+    margin: 20px 0;
+  }
+  .development {
+    &__description_item {
+      margin-left: 0px;
+    }
+  }
+  .success-block {
+    transform: translateY(0);
+  }
+  .development-block {
+    margin-bottom: 20px;
+  }
+  .specialized {
+    padding: 20px 0 20px;
+  }
+  .contacts {
+    padding: 10px 10px;
+  }
+  .contact {
+    padding-top: 10px;
+  }
+  .container--description {
+    padding: 10px 10px;
+  }
+}

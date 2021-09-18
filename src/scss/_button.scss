@@ -1,0 +1,50 @@
+.button {
+  font-family: Open Sans;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 24px;
+  color: $luxewill-black;
+  background-color: $luxewill-primary;
+  border-radius: 33px;
+  padding: 17px 49px;
+  text-decoration: none;
+
+  &:hover {
+    background-color: #ffb572;
+  }
+  &--secondary {
+    background-color: $luxewill-gray;
+    margin: 0;
+
+    &:hover {
+      background-color: #e0dfdf;
+    }
+  }
+}
+@media (max-width: 767px) {
+  .button {
+    font-size: 14px;
+    line-height: 20px;
+    border-radius: 33px;
+    padding: 10px 30px;
+  }
+}
+.form {
+  &__buttons {
+    padding: 40px 0 0;
+  }
+  &__button {
+    font-family: Open Sans;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 24px;
+    color: $luxewill-gray-three;
+    background-color: $luxewill-black;
+    border-radius: 33px;
+    padding: 17px 49px;
+    text-decoration: none;
+    border: none;
+  }
+}
